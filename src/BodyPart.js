@@ -7,8 +7,17 @@ export default function BodyPart() {
   });
 
   let inputEvent = (e) => {
-    let name = e.target.name;
-    let value = e.target.value;
+    // let name = e.target.name;
+    // let value = e.target.value;
+
+    let { name, value } = e.target;
+
+    setformInput((preVal) => {
+      return {
+        ...preVal,
+        [name]: value,
+      };
+    });
 
     // ('ss');
   };
