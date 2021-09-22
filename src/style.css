@@ -146,7 +146,7 @@ header {
 }
 
 #note-title {
-  display: none;
+  /* display: none; */
   width: calc(100% - 10px);
   min-height: 43px;
   margin: 0 5px;
