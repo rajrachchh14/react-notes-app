@@ -91,7 +91,7 @@ header {
 #notes {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 #note-text {

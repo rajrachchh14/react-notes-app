@@ -27,7 +27,18 @@ export default function BodyPart() {
             </div>
           </form>
         </div>
-        <div id="notes"></div>
+        <div id="notes">
+          <div class="note">
+            <div class="note-title">a</div>
+            <div class="note-text">b</div>
+            <div class="toolbar-container">
+              <div class="toolbar">
+                <img class="toolbar-color" src="https://icon.now.sh/palette" />
+                <img class="toolbar-delete" src="https://icon.now.sh/delete" />
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
