@@ -33,8 +33,9 @@ export default function BodyPart() {
             <div class="note-text">b</div>
             <div class="toolbar-container">
               <div class="toolbar">
-                <img class="toolbar-color" src="https://icon.now.sh/palette" />
-                <img class="toolbar-delete" src="https://icon.now.sh/delete" />
+                <i class="toolbar-delete" >
+                  Delete
+                </i>
               </div>
             </div>
           </div>
