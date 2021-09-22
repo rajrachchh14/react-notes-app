@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function BodyPart() {
+  let [formInput, setformInput] = useState({
+    input1: '',
+    input2: '',
+  });
   return (
     <>
       {/* hidden */}
@@ -33,9 +37,7 @@ export default function BodyPart() {
             <div class="note-text">b</div>
             <div class="toolbar-container">
               <div class="toolbar">
-                <i class="toolbar-delete" >
-                  Delete
-                </i>
+                <i class="toolbar-delete">Delete</i>
               </div>
             </div>
           </div>
