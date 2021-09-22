@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function BodyPart() {
+export default function FormPart() {
   let [formInput, setformInput] = useState({
     input1: '',
     input2: '',
@@ -60,7 +60,6 @@ export default function BodyPart() {
           </div>
         </form>
       </div>
-      
     </>
   );
 }

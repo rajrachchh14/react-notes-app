@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from './Header';
-import BodyPart from './BodyPart';
+import FormPart from './FormPart';
 import Display from './Display';
 
 export default function App() {
   return (
     <>
       <Header />
-      <BodyPart />
+      <FormPart />
       <Display />
     </>
   );
