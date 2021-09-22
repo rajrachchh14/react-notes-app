@@ -21,6 +21,11 @@ export default function FormPart() {
 
     // ('ss');
   };
+
+  let Submit = (e) => {
+    console.log('Submit');
+  };
+
   return (
     <>
       {/* hidden */}
@@ -51,7 +56,7 @@ export default function FormPart() {
             onChange={inputEvent}
           />
           <div id="form-buttons">
-            <button type="submit" id="submit-button">
+            <button type="submit" id="submit-button" onClick={Submit}>
               Submit
             </button>
             <button type="button" id="form-close-button">

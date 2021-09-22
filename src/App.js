@@ -4,10 +4,14 @@ import FormPart from './FormPart';
 import Display from './Display';
 
 export default function App() {
+  let AddNote = (e) => {
+    console.log('me');
+  };
+
   return (
     <>
       <Header />
-      <FormPart />
+      <FormPart passNote={AddNote} />
       <Display />
     </>
   );
