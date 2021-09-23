@@ -7,10 +7,10 @@ export default function FormPart() {
   });
 
   let inputEvent = (e) => {
-    // let name = e.target.name;
-    // let value = e.target.value;
+    let name = e.target.name;
+    let value = e.target.value;
 
-    let { name, value } = e.target;
+    // let { name, value } = e.target;
 
     setformInput((preVal) => {
       return {
@@ -29,16 +29,16 @@ export default function FormPart() {
   return (
     <>
       {/* hidden */}
-      {/* <div class="modal">
-        <div class="modal-content">
-          <input class="modal-title" placeholder="Title" type="text" />
-          <input class="modal-text" placeholder="Take a note..." type="text" />
-          <span class="modal-close-button">Close</span>
+      {/* <div className="modal">
+        <div className="modal-content">
+          <input className="modal-title" placeholder="Title" type="text" />
+          <input className="modal-text" placeholder="Take a note..." type="text" />
+          <span className="modal-close-button">Close</span>
         </div>
       </div> */}
 
       <div id="form-container">
-        <form id="form" autocomplete="off">
+        <form id="form" autoComplete="off">
           <input
             id="note-title"
             name="input1"
@@ -50,7 +50,7 @@ export default function FormPart() {
           <input
             id="note-text"
             name="input2"
-            value={formInput.input1}
+            value={formInput.input2}
             placeholder="Take a note..."
             type="text"
             onChange={inputEvent}
