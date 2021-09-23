@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function FormPart() {
+export default function FormPart(props) {
   let [formInput, setformInput] = useState({
     input1: '',
     input2: '',
@@ -23,6 +23,8 @@ export default function FormPart() {
   };
 
   let Submit = (e) => {
+    e.preventDefault();
+    props.passNote();
     console.log('Submit');
   };
 

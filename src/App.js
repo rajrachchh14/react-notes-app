@@ -4,7 +4,7 @@ import FormPart from './FormPart';
 import Display from './Display';
 
 export default function App() {
-  let AddNote = (e) => {
+  let AddNote = () => {
     console.log('me');
   };
 
