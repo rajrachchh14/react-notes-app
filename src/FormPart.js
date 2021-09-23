@@ -25,7 +25,6 @@ export default function FormPart(props) {
   let Submit = (e) => {
     e.preventDefault();
     props.passNote();
-    console.log('Submit');
   };
 
   return (
