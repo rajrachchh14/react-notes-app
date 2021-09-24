@@ -39,6 +39,7 @@ export default function FormPart(props) {
       input1: '',
       input2: '',
     });
+    setExpand(false);
   };
 
   return (
