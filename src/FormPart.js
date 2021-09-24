@@ -22,9 +22,10 @@ export default function FormPart(props) {
     // ('ss');
   };
 
+  // Reverse Props Send
   let Submit = (e) => {
     e.preventDefault();
-    props.passNote();
+    props.passNote(formInput);
   };
 
   return (
