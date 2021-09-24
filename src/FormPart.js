@@ -26,6 +26,12 @@ export default function FormPart(props) {
   let Submit = (e) => {
     e.preventDefault();
     props.passNote(formInput);
+
+    // After Insert Clear Form
+    setformInput({
+      input1: '',
+      input2: '',
+    });
   };
 
   return (
