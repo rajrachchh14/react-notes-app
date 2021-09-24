@@ -6,6 +6,13 @@ export default function FormPart(props) {
     input2: '',
   });
 
+  const [expand, setExpand] = useState(false);
+
+  const OpenIt = () => {
+    // console.log('cli');
+    setExpand(true);
+  };
+
   let inputEvent = (e) => {
     let name = e.target.name;
     let value = e.target.value;
@@ -47,14 +54,16 @@ export default function FormPart(props) {
 
       <div id="form-container">
         <form id="form" autoComplete="off">
-          <input
-            id="note-title"
-            name="input1"
-            value={formInput.input1}
-            placeholder="Title"
-            type="text"
-            onChange={inputEvent}
-          />
+          {expand ? (
+            <input
+              id="note-title"
+              name="input1"
+              value={formInput.input1}
+              placeholder="Title"
+              type="text"
+              onChange={inputEvent}
+            />
+          ) : null}
           <input
             id="note-text"
             name="input2"
@@ -62,12 +71,16 @@ export default function FormPart(props) {
             placeholder="Take a note..."
             type="text"
             onChange={inputEvent}
+            onClick={OpenIt}
           />
-          <div id="form-buttons">
-            <button type="submit" id="submit-button" onClick={Submit}>
-              Submit
-            </button>
-          </div>
+
+          {expand ? (
+            <div id="form-buttons">
+              <button type="submit" id="submit-button" onClick={Submit}>
+                Submit
+              </button>
+            </div>
+          ) : null}
         </form>
       </div>
     </>
