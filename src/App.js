@@ -2,17 +2,26 @@ import React, { useState } from 'react';
 import Header from './Header';
 import FormPart from './FormPart';
 import Display from './Display';
-import Container from './Container';
 
 export default function App() {
   const [addData, setData] = useState([]);
 
   // Reverse Props Receive
-  let NotesSubmit = (formInput) => {
+  const NotesSubmit = (formInput) => {
     // console.log('me', formInput);
     setData((preData) => {
       return [...preData, formInput];
     });
+  };
+
+  const NotesDelete = (id) => {
+    // Reverse Props Receive
+    // setData((preDatas) => {
+    console.log(id);
+    // preDatas.filter((cdata, index) => {
+    //   return index !== id;
+    // });
+    // });
   };
 
   return (
@@ -22,7 +31,14 @@ export default function App() {
       <div className="container">
         <div className="row">
           {addData.map((data, index) => {
-            return <Display key={index} {...data} />;
+            return (
+              <Display
+                key={index}
+                id={index}
+                {...data}
+                deleteNote={NotesDelete}
+              />
+            );
           })}
         </div>
       </div>

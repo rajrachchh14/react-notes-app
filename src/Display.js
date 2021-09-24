@@ -1,6 +1,11 @@
 import React from 'react';
 
 export default function Display(props) {
+  // console.log(props);
+  const deleteNote = () => {
+    // Reverse Props Send
+    props.deleteNote(props.id);
+  };
   return (
     <>
       {/* <div id="notes">
@@ -15,18 +20,14 @@ export default function Display(props) {
         </div>
       </div> */}
 
-      <div className="col-sm-4">
+      <div className="col-sm-3">
         <div className="card">
-          <img className="card-img-top" src="..." alt="Card image cap" />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
-            </a>
+            <h5 className="card-title">{props.input1}</h5>
+            <p className="card-text">{props.input2}</p>
+            <button className="btn btn-danger" onClick={deleteNote}>
+              Delete
+            </button>
           </div>
         </div>
       </div>
