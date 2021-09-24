@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './Header';
 import FormPart from './FormPart';
 import Display from './Display';
+import Container from './Container';
 
 export default function App() {
   const [addData, setData] = useState([]);
@@ -18,9 +19,13 @@ export default function App() {
     <>
       <Header />
       <FormPart passNote={NotesSubmit} />
-      {addData.map((data, index) => {
-        return <Display key={index} {...data} />;
-      })}
+      <div className="container">
+        <div className="row">
+          {addData.map((data, index) => {
+            return <Display key={index} {...data} />;
+          })}
+        </div>
+      </div>
     </>
   );
 }
