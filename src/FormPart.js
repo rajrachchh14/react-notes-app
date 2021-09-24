@@ -67,9 +67,6 @@ export default function FormPart(props) {
             <button type="submit" id="submit-button" onClick={Submit}>
               Submit
             </button>
-            <button type="button" id="form-close-button">
-              Close
-            </button>
           </div>
         </form>
       </div>
