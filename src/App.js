@@ -16,12 +16,12 @@ export default function App() {
 
   const NotesDelete = (id) => {
     // Reverse Props Receive
-    // setData((preDatas) => {
-    console.log(id);
-    // preDatas.filter((cdata, index) => {
-    //   return index !== id;
-    // });
-    // });
+    setData((preDatas) => {
+      // console.log(id);
+      return preDatas.filter((Element, index) => {
+        return index !== id;
+      });
+    });
   };
 
   return (
